@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,700|Poiret+One);
 
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+
 @font-face {
   font-family:FontAwesome;
   src:url(../fonts/fontawesome-webfont.eot?v=4.1.0);
@@ -8485,6 +8487,7 @@ p {
 }
 
 .social-links {
+  margin-top: 0;
   padding-left: 0;
   list-style: none;
   margin-left: -5px;
@@ -8570,7 +8573,7 @@ p {
 }
 
 .section .section-title {
-  font-family: Axis;
+  font-family: Margot-RegularItalic;
   margin: 0;
   color: #2c3e50;
   font-weight: 400;
@@ -8648,7 +8651,7 @@ p {
 }
 
 .section-hero .section-header {
-  margin-bottom: 78px;
+  margin-bottom: 100px;
 }
 
 @media (max-width:767px) {
