@@ -15,7 +15,7 @@ div.outside {
 div.content {
     text-align: center;
     display: table-cell;
-    padding-top: 20%;
+    padding-top: 15em;
 }
 
 img.main-img {
@@ -25,11 +25,12 @@ img.main-img {
     max-width: 350px;
     border: 15px solid #ffffff;
     margin-top: -10em;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+}
+
+img.main-img:hover{
+    max-width:340px;
+    max-height: 340px;
+    border:20px solid #ffffff;    
 }
 
 h1.name {
