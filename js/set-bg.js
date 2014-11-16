@@ -2,21 +2,15 @@ $(document).ready(function() {
     
     
     setBackground();
-    
+    var intervalDelay = 100;
     
     $('.main-img').hover(function () {
-      var intervalDelay = 50;
-      // call doSomethingRepeatedly() function repeatedly with 10ms delay between the function calls
-      intervalId = setInterval(setBackground, intervalDelay);
+        intervalId = setInterval(setBackground, intervalDelay);
+        if (intervalDelay > 50)
+            intervalDelay -= 10;
     }, function () {
-      // cancel calling doSomethingRepeatedly() function repeatedly
-      clearInterval(intervalId);
+        clearInterval(intervalId);
     });
-//    var main_img = document.querySelector('.main-img'), transition;
-//
-//    main_img.addEventListener('mouseover', function() {
-//       setBackground();
-//    }, false);
 });
 
 function setBackground(){
