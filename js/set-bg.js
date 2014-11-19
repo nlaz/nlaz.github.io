@@ -4,12 +4,26 @@ $(document).ready(function() {
     setBackground();
     var intervalDelay = 100;
     
+    var parent = document.getElementById('header');
+    var tiles = {};
+
+    for (i = 0; i < 100; i++){
+        var tile = document.createElement("div");
+        var type = (i % 2) + 1;
+        tile.className = "tile" + type;
+        parent.appendChild(tile);
+        tiles[i] = tile;
+    }
+    
     $('.main-img').hover(function () {
-        intervalId = setInterval(setBackground, intervalDelay);
-        if (intervalDelay > 50)
-            intervalDelay -= 10;
+        $('.inside-border').css({ transform: 'scale(1.1)'});
+
+//        intervalId = setInterval(setBackground, intervalDelay);
+//        if (intervalDelay > 50)
+//            intervalDelay -= 10;
     }, function () {
-        clearInterval(intervalId);
+        $('.inside-border').css({ transform: 'scale(1)' });
+//        clearInterval(intervalId);
     });
 });
 
@@ -61,4 +75,3 @@ function setBackground(){
     );
     
 }
-
