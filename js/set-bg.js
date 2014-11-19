@@ -16,13 +16,15 @@ $(document).ready(function() {
     }
     
     $('.main-img').hover(function () {
-        $('.inside-border').css({ transform: 'scale(1.1)'});
-
+        $('.inside-border').css({ transform: 'scale(1.2)',
+                                  opacity:'0'});
+//        $'.inside-border').css('border-width','0px');
 //        intervalId = setInterval(setBackground, intervalDelay);
 //        if (intervalDelay > 50)
 //            intervalDelay -= 10;
     }, function () {
-        $('.inside-border').css({ transform: 'scale(1)' });
+        $('.inside-border').css({ transform: 'scale(1)', opacity:'1' });
+//        $('.inside-border').css('border-width','15px');
 //        clearInterval(intervalId);
     });
 });
@@ -74,4 +76,5 @@ function setBackground(){
         "-o-linear-gradient(left, " + rGradient[0] + ", " + rGradient[1] + ")"
     );
     
+    $(".inside-border").css("border-color",rGradient[0]);
 }
