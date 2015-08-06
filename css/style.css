@@ -8,15 +8,37 @@
 
 * {
   font-family: 'Open Sans', sans-serif;
-  color: #fff;
+  color: #f6f6f6;
 }
 
 .hero {
   background: #BA2732;
+  padding: 40px;
 }
 
 .hero img {
   border: 10px solid #f6f6f6;
   border-radius: 100%;
   padding: 0;
+}
+
+.hero p {
+  font-size: 16px;  
+  line-height: 30px;
+}
+
+.nav-bar {
+  background: #f6f6f6;
+  height: 60px;
+  padding: 10px 20px;
+}
+
+.nav-bar .logo {
+  float: left;
+  font-size: 22px;
+}
+
+.nav-bar .nav {
+  float: right;
+  font-size: 22px;
 }
