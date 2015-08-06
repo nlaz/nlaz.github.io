@@ -11,6 +11,11 @@
   color: #f6f6f6;
 }
 
+h2 {
+  color: #BA2732;
+  font-weight: bold;
+}
+
 .hero {
   background: #BA2732;
   padding: 40px;
@@ -29,6 +34,13 @@
 .hero p {
   font-size: 16px;  
   line-height: 30px;
+}
+
+.links .card{
+  background: #ececec;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  height: 300px;
 }
 
 .nav-bar {
@@ -54,4 +66,9 @@
 .nav-bar .nav a {
   color: #BA2732;
   padding: 0 20px;
+}
+
+.row h2 {
+  margin: 40px 0;
+  text-align: center;
 }
