@@ -38,6 +38,11 @@
 .footer i {
   color: #8C1A21;
   padding: 6px;
+  transition: color 0.2s ease;
+}
+
+.footer i:hover {
+  color: #f6f6f6;
 }
 
 h1 {
@@ -87,7 +92,7 @@ h2 {
   color: #BA2732;
   float: left;
   font-size: 30px;
-  line-height: 60px;
+  line-height: 50px;
   font-weight: bold;
 }
 
