@@ -71,8 +71,8 @@ h2 {
 }
 
 .hero img {
-  border: 10px solid #f6f6f6;
   border-radius: 100%;
+  max-width: 300px;
   padding: 0;
 }
 
@@ -82,7 +82,8 @@ h2 {
 }
 
 .links {
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .links .row {
@@ -164,4 +165,19 @@ h2 {
   font-size: 35px;
   margin: 30px 0;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .hero .about {
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-bar {
+    padding: 0px 40px;
+  }
+
+  .nav-bar .nav a {
+    padding: 0 10px;
+  }
 }
