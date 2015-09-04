@@ -68,12 +68,14 @@ h2 {
 
 .hero .about {
   padding: 30px;
+  display:table-cell;
 }
 
 .hero img {
   border-radius: 100%;
   max-width: 300px;
   padding: 0;
+  display: table-cell;
 }
 
 .hero p {
