@@ -4,11 +4,35 @@
 */
 
 /* Open Sans Google Font */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700);
 
 /* Oswald Google Font */
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 
 body {
   background-color: #D5ECFC;
+  color: #232323;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -.6px;
+  line-height: 36px;
+  margin: 0;
 }
