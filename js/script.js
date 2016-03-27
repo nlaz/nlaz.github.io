@@ -2,8 +2,11 @@ $(document).ready(function() {
 
   var colorSets = [
     ["#D5ECFC", "#232323"],
-    ["#0E83CD", "#FFFFFF"],
-    ["#FEC924", "#482A18"]
+    ["#0E83CD", "#032d46"],
+    ["#FEC924", "#482A18"],
+    ["#f79380", "#1a1c53"],
+    ["#6ccace", "#1d3748"],
+    ["#29d1f6", "#41393a"]
   ];
 
   var colors = colorSets [ 
