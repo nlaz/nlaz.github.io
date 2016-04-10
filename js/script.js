@@ -6,7 +6,9 @@ $(document).ready(function() {
     ["#FEC924", "#482A18"],
     ["#f79380", "#1a1c53"],
     ["#6ccace", "#1d3748"],
-    ["#29d1f6", "#41393a"]
+    ["#29d1f6", "#41393a"],
+    ["#FFDE85", "#986432"],
+    ["#C4E8FB", "#34648D"]
   ];
 
   var colors = colorSets [ 
