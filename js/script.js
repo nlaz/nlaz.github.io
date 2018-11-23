@@ -1,23 +1,45 @@
-const colorSets = [
-  ["#D5ECFC", "#232323"],
-  ["#FEC924", "#482A18"],
-  ["#f79380", "#1a1c53"],
-  ["#6ccace", "#1d3748"],
-  ["#29d1f6", "#353343"],
-  ["#FFDE85", "#986432"],
-  ["#C4E8FB", "#34648D"],
-  ["#81D4D1", "#384450"],
-];
+let material;
 
-const colors = colorSets[Math.floor(Math.random() * colorSets.length)];
+const getCursorXY = e => {
+  if (window.Event) {
+    const cursorX = window.innerWidth / 2 - e.pageX;
+    const cursorY = window.innerHeight / 2 - e.pageY;
+    const angle = Math.atan2(cursorX, cursorY) * 180 / Math.PI;
+    const rotation = angle > 0 ? angle : 360 - Math.abs(angle);
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  const body = document.getElementById("body");
-  const links = document.querySelectorAll("li a");
-  body.style.color = colors[1];
-  body.style.background = colors[0];
+    material.uniforms.uRotation.value = rotation;
+  }
+};
 
-  for (let i = 0; i < links.length; i++) {
-    links[i].style.color = colors[1];
+const setupTitle = () => {
+  const text = new Blotter.Text("Niko Lazaris", {
+    family: "'EB Garamond', serif",
+    size: 64,
+    fill: "#202020",
+    paddingLeft: 40,
+    paddingRight: 40,
+  });
+
+  material = new Blotter.ChannelSplitMaterial();
+
+  material.uniforms.uRotation.value = 0.0;
+  material.uniforms.uApplyBlur.value = 0.0;
+
+  const blotter = new Blotter(material, {
+    texts: text,
+  });
+
+  const elem = document.getElementById("title");
+  const scope = blotter.forText(text);
+
+  scope.appendTo(elem);
+};
+
+document.addEventListener("DOMContentLoaded", e => {
+  setupTitle();
+
+  if (window.Event) {
+    document.captureEvents(Event.MOUSEMOVE);
+    document.onmousemove = getCursorXY;
   }
 });
