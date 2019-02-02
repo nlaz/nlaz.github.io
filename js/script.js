@@ -1,45 +1,16 @@
-let material;
+const checkbox = document.querySelector("input[type='checkbox']");
 
-const getCursorXY = e => {
-  if (window.Event) {
-    const cursorX = window.innerWidth / 2 - e.pageX;
-    const cursorY = window.innerHeight / 2 - e.pageY;
-    const angle = Math.atan2(cursorX, cursorY) * 180 / Math.PI;
-    const rotation = angle > 0 ? angle : 360 - Math.abs(angle);
+checkbox.addEventListener("click", e => {
+  const checked = e.target.checked;
+  const body = document.querySelector('body');
+  const internet = document.querySelector('.internet');
+  const arr = document.querySelectorAll('.list i');
+  const marquees = document.querySelectorAll('marquee');
 
-    material.uniforms.uRotation.value = rotation;
-  }
-};
+  body.classList.toggle('bg-near-black', checked);
+  body.classList.toggle('washed-yellow', checked);
+  internet.classList.toggle('glitter', checked);
 
-const setupTitle = () => {
-  const text = new Blotter.Text("Niko Lazaris", {
-    family: "'EB Garamond', serif",
-    size: 64,
-    fill: "#202020",
-    paddingLeft: 40,
-    paddingRight: 40,
-  });
-
-  material = new Blotter.ChannelSplitMaterial();
-
-  material.uniforms.uRotation.value = 0.0;
-  material.uniforms.uApplyBlur.value = 0.0;
-
-  const blotter = new Blotter(material, {
-    texts: text,
-  });
-
-  const elem = document.getElementById("title");
-  const scope = blotter.forText(text);
-
-  scope.appendTo(elem);
-};
-
-document.addEventListener("DOMContentLoaded", e => {
-  setupTitle();
-
-  if (window.Event) {
-    document.captureEvents(Event.MOUSEMOVE);
-    document.onmousemove = getCursorXY;
-  }
+  arr.forEach(el => el.classList.toggle('glitter', checked) );
+  marquees.forEach(el => el.classList.toggle('o-0', !checked) );
 });

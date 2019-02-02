@@ -6,26 +6,35 @@
   <title>Niko Lazaris</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link href="css/style.css" rel="stylesheet">
-  <link href="css/animations.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <script src="./js/blotter.min.js"></script>
-  <script src="./js/channelSplitMaterial.js"></script>
-  <script src='./js/script.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
 </head>
-<body id="body">
+<body class="helvetica flex flex-column justify-center relative">
+  <div class="mw9 center w-100 mb6 pa5">
+    <div class='mb3 measure bb bw2 b--white'>
+      <h1 class='f1 ma0'>Niko Lazaris</h1>
+      <h2 class='f3 mt0 normal'>building things on the <span class='internet'>internet</span>.</h2>
+    </div>
 
-  <div class="hero">
-    <h1 id='title'></h1>
-    <h2>building things on the internet</h2>
-
-    <ul>
-      <li><a id="one" href="https://github.com/nlaz" target="_blank"><i class="fa fa-2x fa-github-alt"></i></a></li>
-      <li><a id="two" href="https://twitter.com/nikolazaris" target="_blank"><i class="fa fa-2x fa-twitter"></i></a></li>
-      <li><a id="three" href="https://www.linkedin.com/in/niko-lazaris-88946186" target="_blank"><i class="fa fa-2x fa-linkedin"></i></a></li>
-      <li><a id="four" href="https://dribbble.com/nlaz" target="_blank"><i class="fa fa-2x fa-dribbble"></i></a></li>
-      <li><a id="five" href="mailto:nikolazaris@gmail.com" target="_blank"><i class="fa fa-2x fa-envelope"></i></a></li>
+    <ul class='list flex content-between pl0'>
+      <li><a class='color-inherit pr3' href="https://github.com/nlaz" target="_blank"><i class="fab fa-lg fa-github-alt"></i></a></li>
+      <li><a class='color-inherit pr3' href="https://twitter.com/nikolazaris" target="_blank"><i class="fab fa-lg fa-twitter"></i></a></li>
+      <li><a class='color-inherit pr3' href="https://www.linkedin.com/in/niko-lazaris-88946186" target="_blank"><i class="fab fa-lg fa-linkedin"></i></a></li>
+      <li><a class='color-inherit pr3' href="https://dribbble.com/nlaz" target="_blank"><i class="fab fa-lg fa-dribbble"></i></a></li>
+      <li><a class='color-inherit' href="mailto:nikolazaris@gmail.com" target="_blank"><i class="fas fa-lg fa-envelope"></i></a></li>
     </ul>
   </div>
 
+  <div class='f3 mr1 absolute left-2 top-2 flex items-content'>
+    <span>🍕</span>
+    <div class="relative ml3">
+      <input class="absolute z-5 w-100 h-100 o-0 pointer checkbox" type="checkbox" />
+      <div class="relative bg-mid-gray overflow-hidden v-mid bg-animate checkbox-wrapper ba b--light-gray">
+        <div class="absolute left-0 bg-white shadow-4 checkbox-toggle"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src='./js/script.js'></script>
 </body>
 </html>
