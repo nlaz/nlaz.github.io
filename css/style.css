@@ -5,20 +5,14 @@
 body {
   height: 100vh;
   transition: all 0.3s cubic-bezier(0.33, 1, 0.66, 1);
+  /* background-image: url(../img/glitter.gif); */
 }
 
 .glitter {
   color: white;
-  background-image: -webkit-linear-gradient(top, transparent, transparent), url(../img/glitter.gif);
-  background-position-x: initial, 100px;
-  background-position-y: initial, 20px;
-  background-size: initial, initial;
-  -webkit-background-repeat-x: initial, repeat;
-  -webkit-background-repeat-y: initial, repeat;
-  background-attachment: initial, initial;
-  background-origin: initial, initial;
+  background-image: url(../img/glitter.gif);
   background-color: initial;
-  filter: hue-rotate(50deg);
+  filter: hue-rotate(45deg);
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   text-decoration: none;
