@@ -1,13 +1,48 @@
+/*
+* Make it beautiful 🌈.
+*/
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  transition: all 0.3s cubic-bezier(0.33, 1, 0.66, 1);
+  /* background-image: url(../img/glitter.gif); */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.glitter {
+  color: white;
+  background-image: url(./assets/glitter.gif);
+  background-color: initial;
+  filter: hue-rotate(45deg);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-decoration: none;
+}
+
+.list .fa-lg {
+  line-height: 1;
+}
+
+.checkbox-toggle {
+  height: 24px;
+  width: 24px;
+  transition: all 0.3s cubic-bezier(0.33, 1, 0.66, 1);
+}
+
+.checkbox-wrapper {
+  width: 48px;
+  height: 24px;
+}
+
+.checkbox:checked + .checkbox-wrapper {
+  background-color: #19a974; /* green color */
+  border-color: black !important;
+}
+
+.checkbox:checked + .checkbox-wrapper .checkbox-toggle {
+  left: 24px;
+  background-color: white;
+}
+
+.checkbox:checked +  {
+  background: black;
 }
