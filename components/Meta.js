@@ -48,6 +48,7 @@ class Meta extends Component {
         />
         <link rel="stylesheet" href="/styles/index.css" />
         <link rel="stylesheet" href="/styles/index.css" />
+        <script src="/js/script.js"></script>
       </Head>
     );
   }
