@@ -46,7 +46,10 @@ class Meta extends Component {
           rel="stylesheet"
           href="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css"
         />
-        <link rel="stylesheet" href="/styles/index.css" />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        />
         <link rel="stylesheet" href="/styles/index.css" />
         <script src="/js/script.js"></script>
       </Head>
