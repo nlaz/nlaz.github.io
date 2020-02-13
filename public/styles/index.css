@@ -5,12 +5,11 @@
 body {
   height: 100vh;
   transition: all 0.3s cubic-bezier(0.33, 1, 0.66, 1);
-  /* background-image: url(../img/glitter.gif); */
 }
 
 .glitter {
   color: white;
-  background-image: url(../img/glitter.gif);
+  background-image: url(../images/glitter.gif);
   background-color: initial;
   filter: hue-rotate(45deg);
   -webkit-background-clip: text !important;

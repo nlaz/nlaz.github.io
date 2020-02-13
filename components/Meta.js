@@ -21,6 +21,8 @@ class Meta extends Component {
 
   render() {
     const canonicalUrl = `${rootUrl}${this.props.router.pathname}`;
+    const facebookImage = `${rootUrl}${defaults.facebookImage}`;
+    const twitterImage = `${rootUrl}${defaults.twitterImage}`;
 
     return (
       <Head>
@@ -32,7 +34,7 @@ class Meta extends Component {
         <meta property="og:title" content={this.props.title} />
         <meta property="og:description" content={this.props.description} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={defaults.facebookImage} />
+        <meta property="og:image" content={facebookImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:url" content={canonicalUrl} />
@@ -41,7 +43,7 @@ class Meta extends Component {
         <meta name="twitter:creator" content="@nikolazaris" />
         <meta name="twitter:title" content={this.props.title} />
         <meta name="twitter:description" content={this.props.description} />
-        <meta name="twitter:image" content={defaults.twitterImage} />
+        <meta name="twitter:image" content={twitterImage} />
         <link
           rel="stylesheet"
           href="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css"
