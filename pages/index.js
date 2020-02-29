@@ -6,7 +6,7 @@ import ProjectItem from "../components/home/ProjectItem";
 import data from "../data/projectSection.json";
 
 const HomePage = ({ projects }) => (
-  <div className="helvetica relative debug">
+  <div className="helvetica relative">
     <Meta
       title="Niko Lazaris"
       description="I build things for the internet. Product Manager at Major League Hacking. Previously Meetup, hackNY, and HubSpot."
@@ -22,15 +22,17 @@ const HomePage = ({ projects }) => (
     </div>
 
     <div className="mw9 center flex flex-wrap">
-      {projects.map(project => (
-        <ProjectItem project={project} key={project.slug} />
+      {projects.map((project, index) => (
+        <div className="w-25 ph4 mb5" key={index}>
+          <ProjectItem project={project} />
+        </div>
       ))}
     </div>
   </div>
 );
 
 HomePage.getInitialProps = async () => {
-  return { projects: data.projects.map(i => i.fields) };
+  return { projects: data.projects.map(i => i.fields).filter(i => i) };
 };
 
 export default HomePage;

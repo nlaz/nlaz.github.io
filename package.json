@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "postinstall": "npm run getcontent",
-    "getcontent": "node utils/getcontent.js install"
+    "content": "node utils/getcontent.js install"
   },
   "license": "MIT",
   "dependencies": {
