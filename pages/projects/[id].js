@@ -17,7 +17,10 @@ const getHeaderPhotoURL = project => {
 
 const ProjectPage = ({ project, relatedProjects }) => (
   <div className="helvetica relative">
-    <Meta title={project.title} description={project.tagline} />
+    <Meta
+      title={`${project.title} - Niko Lazaris`}
+      description={project.description}
+    />
     <Navbar />
     <div className="mw9 ph6 center pb6">
       <div className="ph6 pt4">

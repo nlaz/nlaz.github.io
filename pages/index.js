@@ -2,10 +2,12 @@ import React from "react";
 import Meta from "../components/Meta";
 import Navbar from "../components/Navbar";
 import ProjectItem from "../components/home/ProjectItem";
+import TeamItem from "../components/home/TeamItem";
 
-import data from "../data/projectSection.json";
+import projectData from "../data/projectSection.json";
+import teamData from "../data/teamSection.json";
 
-const HomePage = ({ projects }) => (
+const HomePage = ({ projects, teams }) => (
   <div className="helvetica relative">
     <Meta
       title="Niko Lazaris"
@@ -21,18 +23,35 @@ const HomePage = ({ projects }) => (
       </div>
     </div>
 
-    <div className="mw9 center flex flex-wrap">
-      {projects.map((project, index) => (
-        <div className="w-25 ph4 mb5" key={index}>
-          <ProjectItem project={project} />
-        </div>
-      ))}
+    <div className="mw9 mb5 center">
+      <h3 className="ph3 ph2-m ph4-l mb4 courier normal">- Projects</h3>
+      <div className="flex flex-wrap">
+        {projects.map((project, index) => (
+          <div className="w-50-m w-25-l ph3 ph2-m ph4-l mb5" key={index}>
+            <ProjectItem project={project} />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="mw9 mb6 center">
+      <h3 className="ph3 ph2-m ph4-l mb4 courier normal">- Teams</h3>
+      <div className="flex flex-wrap">
+        {teams.map((team, index) => (
+          <div className="w-50-m w-25-l ph3 ph2-m ph4-l mb5" key={index}>
+            <TeamItem team={team} />
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 );
 
 HomePage.getInitialProps = async () => {
-  return { projects: data.projects.map(i => i.fields).filter(i => i) };
+  return {
+    projects: projectData.projects.map(i => i.fields).filter(i => i),
+    teams: teamData.teams.map(i => i.fields).filter(i => i)
+  };
 };
 
 export default HomePage;

@@ -8,7 +8,7 @@ const client = require("contentful").createClient({
   accessToken: "nCltJermKuEzJrVHiehQdcbqj7ygKIda1QfAv0Keu7o"
 });
 
-const types = ["projectSection"];
+const types = ["projectSection", "teamSection"];
 
 const getcontent = async () => {
   console.log("> Starting import...");
