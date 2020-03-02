@@ -9,20 +9,39 @@ import shuffleArray from "../../helpers/shuffleArray";
 
 import data from "../../data/projectSection.json";
 
+const getHeaderPhotoURL = project => {
+  if (project.photo && project.photo.fields) {
+    return `${project.photo.fields.file.url}?h=650&fit=fill`;
+  }
+};
+
 const ProjectPage = ({ project, relatedProjects }) => (
   <div className="helvetica relative">
     <Meta title={project.title} description={project.tagline} />
     <Navbar />
     <div className="mw9 ph6 center pb6">
-      <div className="bg-light-gray" style={{ height: "650px" }} />
+      <div className="ph6 pt4">
+        <div className="bg-light-gray" style={{ height: "650px" }}>
+          <img
+            className="w-100"
+            src={getHeaderPhotoURL(project)}
+            alt={project.title}
+            style={{ height: "650px", objectFit: "cover" }}
+          />
+        </div>
+      </div>
       <div className="ph6">
-        <h1 className="pt6 mt3">{project.title}</h1>
+        <h1 className="pt5 mt3 internet">{project.title}</h1>
         <div className="mt4 mb6 pb6 f4" style={{ lineHeight: 1.75 }}>
           {documentToReactComponents(project.description)}
         </div>
       </div>
 
-      <div className="flex mb6 bt pt5 mt3 b--light-gray bw1 mh6">
+      <div className="bt b--light-gray bw1 mh6" />
+      <div
+        className="flex mb6 ph6 pt5 mt3"
+        style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
+      >
         {relatedProjects.map((project, index) => (
           <div className="w-third ph3" key={index}>
             <ProjectItem project={project} />

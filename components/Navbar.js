@@ -1,10 +1,19 @@
 import React from "react";
 import Anchor from "./Anchor";
+import Link from "./Link";
+import { withRouter } from "next/router";
 
-const Navbar = () => (
+const Navbar = ({ router }) => (
   <div className="absolute top-0 right-0 left-0 flex justify-between items-center pv4 ph4 ph5-ns">
     <div className="flex items-content mr1">
-      <span className="f3">🍕</span>
+      <Link to="/" className="f3 link relative">
+        {router.pathname !== "/" && (
+          <span className="absolute black" style={{ left: "-28px" }}>
+            ﹤{" "}
+          </span>
+        )}
+        🍕
+      </Link>
       <div className="relative ml3">
         <input
           className="absolute z-5 w-100 h-100 o-0 pointer checkbox"
@@ -44,4 +53,4 @@ const Navbar = () => (
   </div>
 );
 
-export default Navbar;
+export default withRouter(Navbar);
