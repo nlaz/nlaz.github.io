@@ -17,6 +17,10 @@ body {
   text-decoration: none;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .list .fa-lg {
   line-height: 1;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Anchor from "./Anchor";
 import Link from "./Link";
 import { withRouter } from "next/router";
+import { ChevronLeft } from "react-feather";
 
 const Navbar = ({ router }) => (
   <div className="absolute top-0 right-0 left-0 flex justify-between items-center pv4 ph4 ph5-ns">
@@ -9,7 +10,7 @@ const Navbar = ({ router }) => (
       <Link to="/" className="f3 link relative">
         {router.pathname !== "/" && (
           <span className="absolute black" style={{ left: "-28px" }}>
-            ﹤{" "}
+            <ChevronLeft stroke="#000000" />
           </span>
         )}
         🍕

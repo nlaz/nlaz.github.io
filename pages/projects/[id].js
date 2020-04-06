@@ -1,7 +1,10 @@
 import React from "react";
+import { ExternalLink } from "react-feather";
+
 import Navbar from "../../components/Navbar";
 import Meta from "../../components/Meta";
 import ProjectItem from "../../components/home/ProjectItem";
+import Anchor from "../../components/Anchor";
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -34,7 +37,12 @@ const ProjectPage = ({ project, relatedProjects }) => (
         </div>
       </div>
       <div className="ph6">
-        <h1 className="pt5 mt3 internet">{project.title}</h1>
+        <div className="pt5 mt3 flex items-center">
+          <h1 className="mv0 internet">{project.title}</h1>
+          <Anchor href={project.link} className="ml3">
+            <ExternalLink stroke="#000000" />
+          </Anchor>
+        </div>
         <div className="mt4 mb6 pb6 f4" style={{ lineHeight: 1.75 }}>
           {documentToReactComponents(project.description)}
         </div>
