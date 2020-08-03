@@ -21,7 +21,9 @@ const ProjectCard = ({ project }) => (
       className="project-card link-reset flex flex-column h-100 shadow br3 bg-white"
       href={project.link}
     >
-      <div className="bg-light-gray" style={{ height: "140px" }} />
+      <div className="image-wrapper">
+        <img src={project.logo} className="bg-light-gray" alt={project.title} />
+      </div>
       <div className="pa3">
         <h5 className="purple f5 fw5 mb1 mt2">{project.title}</h5>
         <p className="f6 gray lh-title mt2 pb1">{project.description}</p>
@@ -78,7 +80,7 @@ const HomePage = ({
   volunteer,
   work,
 }) => {
-  const [showProjects, setShowProjects] = useState(true);
+  const [showProjects, setShowProjects] = useState(false);
   const [showWork, setShowWork] = useState(false);
   const [showCommunities, setShowCommunities] = useState(false);
   const [showArticles, setShowArticles] = useState(false);

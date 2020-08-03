@@ -95,6 +95,24 @@ a[href].row-item:hover {
   box-shadow: 0 1px 1px rgba(85, 102, 119, 0.1),
     0 1px 3px rgba(85, 102, 119, 0.15), 0 4px 8px rgba(85, 102, 119, 0.2);
 }
+.project-card:hover img {
+  transform: scale(1.05);
+  background: black;
+}
+.project-card .image-wrapper {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 140px;
+  overflow: hidden;
+}
+.project-card img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
 
 .dark-gray {
   color: var(--dark-gray) !important;

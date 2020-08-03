@@ -1,10 +1,8 @@
 const badgeFor = (technology) => {
   switch (technology) {
-    case "Hardware":
-      return "badge-red";
-
     case "Node.js":
     case "Android":
+    case "Tachyons":
     case "Shopify":
     case "Gulp":
       return "badge-green";
@@ -14,8 +12,10 @@ const badgeFor = (technology) => {
     case "Sketch":
     case "Myo":
     case "Eclipse":
+    case "Nest Cam":
       return "badge-purple";
 
+    case "Hardware":
     case "Express":
     case "SQLAlchemy":
     case "Illustrator":
