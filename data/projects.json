@@ -1,0 +1,106 @@
+[
+  {
+    "logo": "",
+    "background": "",
+    "title": "Matchstick",
+    "description": "A tool for design and developers to visually compare code and designs.",
+    "technologies": "React, Node.js, Express, AWS S3, Puppeteer, Heroku",
+    "link": "https://matchstick.xyz/"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Hacker Brand",
+    "description": "A clothing brand for hackers. Built as a Shopify site with a custom frontend.",
+    "technologies": "React, Next.js, Shopify, Illustrator",
+    "link": "https://onlyhackers.nyc/"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "The Offline Writing App",
+    "description": "A web app for writing that only works if you turn off your wifi.",
+    "technologies": "React, GitHub Pages",
+    "link": "http://www.theofflinewritingapp.com/?ref=producthunt#/"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Buddy the Fish",
+    "description": "An ephimeral web app that hosted a livestream of our pet fish, Buddy.",
+    "technologies": "React, Next.js, Nest Cam",
+    "link": "https://github.com/nlaz/buddy"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Citizen Tech",
+    "description": "A site for socially responsible technologists with a job board and resources.",
+    "technologies": "React, GitHub Pages, Tachyons",
+    "link": "http://citizen.tech/"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Node.js Starter Kit",
+    "description": "A starting point for hackathon projects written in JavaScript.",
+    "technologies": "Node.js, Express, PostgresSQL",
+    "link": "https://github.com/MLH/mlh-hackathon-nodejs-starter"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Flask Starter Kit",
+    "description": "A starting point for hackathon projects written in Python.",
+    "technologies": "Flask, Blueprints, SQLAlchemy",
+    "link": "https://github.com/MLH/mlh-hackathon-flask-starter"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Flamingo.cool",
+    "description": "Flamingo is a Slack app that makes it super easy to invite and gather friends.",
+    "technologies": "Slack API, Express",
+    "link": "https://github.com/nlaz/flamingo-cool"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Midimarkup",
+    "description": "Music composition suite with MIDI markup language",
+    "technologies": "HTML, JavaScript, Sass, Gulp",
+    "link": "http://jhil.co/midi-markup/"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Trove",
+    "description": "Trove lets you store digital photos, videos, audio and more in physical space using IoT devices.",
+    "technologies": "Android, Eclipse, Estimote IoT",
+    "link": "http://joelcalifa.com/trove/"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Magic Board",
+    "description": "Magic Board allows Boosted Board users to replace their original controller with a Myo Armband.",
+    "technologies": "Hardware, iOS, Node.js, Myo, Tessel, Sketch",
+    "link": "https://devpost.com/software/magic-board"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "Bitter",
+    "description": "Bitter, \"One Bit Twitter\", is Reddit for the physical world. Upvote anywhere on planet earth.",
+    "technologies": "HTML, CSS, Sketch, iOS, Node.js",
+    "link": "https://github.com/Shrugs/bitter"
+  },
+  {
+    "logo": "",
+    "background": "",
+    "title": "git-khaled",
+    "description": "Khaledify your commit messages. Git-khaled updates your git messages inspired by DJ Khaled.",
+    "technologies": "Bash, Terminal, Git",
+    "link": "https://github.com/nlaz/git-khaled"
+  }
+]

@@ -7,7 +7,7 @@ const rootUrl = "https://niko.pizza";
 
 const defaults = {
   twitterImage: "https://niko.pizza/images/social-card.jpg",
-  facebookImage: "https://niko.pizza/images/social-card.jpg"
+  facebookImage: "https://niko.pizza/images/social-card.jpg",
 };
 
 class Meta extends Component {
@@ -53,7 +53,6 @@ class Meta extends Component {
           href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         />
         <link rel="stylesheet" href="/styles/index.css" />
-        <script src="/js/script.js"></script>
       </Head>
     );
   }

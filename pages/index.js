@@ -9,11 +9,39 @@ import TeamItem from "../components/home/TeamItem";
 import articles from "../data/articles.json";
 import communities from "../data/communities.json";
 import education from "../data/education.json";
+import projects from "../data/projects.json";
 import volunteer from "../data/volunteer.json";
 import work from "../data/work.json";
 
+import badgeFor from "../utils/badgeFor";
+
+const ProjectCard = ({ project }) => (
+  <div className="project-wrapper w-third mb4 pb1">
+    <Anchor
+      className="project-card link-reset flex flex-column h-100 shadow br3 bg-white"
+      href={project.link}
+    >
+      <div className="bg-light-gray" style={{ height: "140px" }} />
+      <div className="pa3">
+        <h5 className="purple f5 fw5 mb1 mt2">{project.title}</h5>
+        <p className="f6 gray lh-title mt2 pb1">{project.description}</p>
+        <div className="flex flex-wrap mb2 pb1">
+          {project.technologies.split(",").map((item, key) => (
+            <div className="mr2 mv1" key={key}>
+              <span className={cx("badge", badgeFor(item.trim()))}>{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Anchor>
+  </div>
+);
+
 const RowItem = ({ logo, title, subtitle, link, period, description }) => (
-  <div className="row-item flex items-center pv2 ph3 bb b--light-gray">
+  <Anchor
+    className="row-item link-reset flex items-center pv2 ph3 bb b--light-gray"
+    href={link}
+  >
     <img
       className="bg-light-gray  br2 mr3 ml2 mv1"
       style={{ height: "48px", width: "48px" }}
@@ -29,7 +57,7 @@ const RowItem = ({ logo, title, subtitle, link, period, description }) => (
       className="w-20 f6 fw5 light-gray mr2"
       dangerouslySetInnerHTML={{ __html: period }}
     />
-  </div>
+  </Anchor>
 );
 
 const ShowButton = ({ showMore, onClick }) => (
@@ -44,11 +72,11 @@ const ShowButton = ({ showMore, onClick }) => (
 
 const HomePage = ({
   articles,
-  projects,
-  work,
-  education,
   communities,
+  education,
+  projects,
   volunteer,
+  work,
 }) => {
   const [showProjects, setShowProjects] = useState(true);
   const [showWork, setShowWork] = useState(false);
@@ -59,6 +87,7 @@ const HomePage = ({
   const _communities = showCommunities ? communities : communities.slice(0, 2);
   const _articles = showArticles ? articles : articles.slice(0, 3);
   const _volunteer = showVolunteer ? volunteer : volunteer.slice(0, 2);
+  const _projects = showProjects ? projects : projects.slice(0, 3);
   return (
     <div className="helvetica relative bg-near-white near-black pv5">
       <Meta
@@ -72,8 +101,16 @@ const HomePage = ({
           League Hacking.
         </p>
       </div>
-      <div className="mw8 center mb5">
-        <h3 className="prime purple f4 fw4">Projects</h3>
+      <div className="mw8 center mb3">
+        <div className="flex items-center mb3 pb1 justify-between">
+          <h3 className="prime purple f4 fw4 mv0">Projects</h3>
+          <ShowButton showMore={showProjects} onClick={setShowProjects} />
+        </div>
+        <div className="flex flex-wrap">
+          {_projects.map((project, key) => (
+            <ProjectCard key={key} project={project} />
+          ))}
+        </div>
       </div>
       <div className="mw8 center fw4 mb4">
         <div className="flex items-center mb3 pb1 justify-between">
@@ -84,24 +121,7 @@ const HomePage = ({
           {_work.map((item, key) => (
             <RowItem
               key={key}
-              logo={item.logo}
-              title={item.role}
-              subtitle={item.company}
-              description={item.description}
-              period={item.period}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="mw8 center fw4 mb4">
-        <div className="flex items-center mb3 pb1 justify-between mt4">
-          <h3 className="prime purple f4 fw4 mv0">Communities</h3>
-          <ShowButton showMore={showCommunities} onClick={setShowCommunities} />
-        </div>
-        <div className="mt3 br3 bg-white shadow">
-          {_communities.map((item, key) => (
-            <RowItem
-              key={key}
+              link={item.link}
               logo={item.logo}
               title={item.role}
               subtitle={item.company}
@@ -120,9 +140,29 @@ const HomePage = ({
           {_articles.map((item, key) => (
             <RowItem
               key={key}
+              link={item.link}
               logo={item.logo}
               title={item.title}
               subtitle={item.subtitle}
+              period={item.period}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="mw8 center fw4 mb4">
+        <div className="flex items-center mb3 pb1 justify-between mt4">
+          <h3 className="prime purple f4 fw4 mv0">Communities</h3>
+          <ShowButton showMore={showCommunities} onClick={setShowCommunities} />
+        </div>
+        <div className="mt3 br3 bg-white shadow">
+          {_communities.map((item, key) => (
+            <RowItem
+              key={key}
+              link={item.link}
+              logo={item.logo}
+              title={item.role}
+              subtitle={item.company}
+              description={item.description}
               period={item.period}
             />
           ))}
@@ -137,6 +177,7 @@ const HomePage = ({
           {_volunteer.map((item, key) => (
             <RowItem
               key={key}
+              link={item.link}
               logo={item.logo}
               title={item.title}
               subtitle={item.subtitle}
@@ -151,6 +192,7 @@ const HomePage = ({
           {education.map((item, key) => (
             <RowItem
               key={key}
+              link={item.link}
               logo={item.logo}
               title={item.degree}
               subtitle={item.school}
@@ -192,15 +234,13 @@ const HomePage = ({
   );
 };
 
-HomePage.getInitialProps = async () => {
-  return {
-    projects: [],
-    articles: articles,
-    communities: communities,
-    education: education,
-    volunteer: volunteer,
-    work: work,
-  };
-};
+HomePage.getInitialProps = () => ({
+  projects: projects,
+  articles: articles,
+  communities: communities,
+  education: education,
+  volunteer: volunteer,
+  work: work,
+});
 
 export default HomePage;

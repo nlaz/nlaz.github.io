@@ -2,6 +2,12 @@
 * Make it beautiful 🌈.
 */
 
+:root {
+  --dark-gray: #345;
+  --light-gray: #89a;
+  --purple: #745fb5;
+}
+
 body {
   height: 100vh;
   transition: all 0.3s cubic-bezier(0.33, 1, 0.66, 1);
@@ -59,22 +65,81 @@ body {
   background: black;
 }
 
+.row-item:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
 .row-item:last-child {
   border: none;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+a[href].row-item:hover {
+  background: #f8f8f9 !important;
 }
 .row-item img {
   object-fit: contain;
 }
+.project-wrapper {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.project-wrapper:nth-child(3n) {
+  padding-right: 0;
+}
+.project-wrapper:nth-child(3n + 1) {
+  padding-left: 0;
+}
+.project-card:hover {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 1px rgba(85, 102, 119, 0.1),
+    0 1px 3px rgba(85, 102, 119, 0.15), 0 4px 8px rgba(85, 102, 119, 0.2);
+}
 
 .dark-gray {
-  --dark-gray: #345;
   color: var(--dark-gray) !important;
 }
 .light-gray {
-  --light-gray: #89a;
   color: var(--light-gray) !important;
 }
 .purple {
-  --purple: #745fb5;
   color: var(--purple) !important;
+}
+.link-reset {
+  text-decoration: none;
+}
+
+.badge {
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.badge-default {
+  background: #f4f4f4;
+  color: #333333;
+}
+.badge-blue {
+  background: #dcecff;
+  color: #00449e;
+}
+.badge-red {
+  background: #ffdfdf;
+  color: #e7040f;
+}
+.badge-orange {
+  background: #fff1e9;
+  color: #ed5c01;
+}
+.badge-green {
+  background: #e8fdf5;
+  color: #137752;
+}
+.badge-yellow {
+  background: #fffceb;
+  color: #f4cd00;
+}
+.badge-purple {
+  background: #f5eeff;
+  color: var(--purple);
 }
