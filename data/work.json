@@ -1,0 +1,44 @@
+[
+  {
+    "logo": "images/mlh.jpg",
+    "role": "Senior Product Manager",
+    "company": "Major League Hacking",
+    "period": "Feb. 2019 - Now"
+  },
+  {
+    "logo": "images/flashcards.jpg",
+    "role": "Co-Founder",
+    "company": "Flashcards for Developers",
+    "period": "Oct. 2017 - Feb. 2019"
+  },
+  {
+    "logo": "images/meetup.jpg",
+    "role": "Full Stack Engineer",
+    "company": "Meetup",
+    "period": "Aug. 2016 - Oct. 2017"
+  },
+  {
+    "logo": "images/mlh.jpg",
+    "role": "Software Engineering Intern",
+    "company": "Major League Hacking",
+    "period": "May 2015 - Aug. 2015"
+  },
+  {
+    "logo": "images/cerebri.jpg",
+    "role": "Co-Founder, Android Lead",
+    "company": "Cerebri AI",
+    "period": "Sept. 2014 - May 2015"
+  },
+  {
+    "logo": "images/hubspot.png",
+    "role": "Mobile Engineering Intern",
+    "company": "HubSpot",
+    "period": "May 2014 - Aug. 2014"
+  },
+  {
+    "logo": "images/wonderspace.jpg",
+    "role": "iOS / Xcode Instructor",
+    "company": "WonderSpace Tech Camp",
+    "period": "May 2013 - Aug. 2013"
+  }
+]

@@ -7,6 +7,11 @@ body {
   transition: all 0.3s cubic-bezier(0.33, 1, 0.66, 1);
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .glitter {
   color: white;
   background-image: url(../images/glitter.gif);
@@ -23,6 +28,11 @@ body {
 
 .list .fa-lg {
   line-height: 1;
+}
+
+.shadow {
+  box-shadow: 0 1px 1px rgba(85, 102, 119, 0.2),
+    0 1px 3px rgba(85, 102, 119, 0.25);
 }
 
 .checkbox-toggle {
@@ -45,7 +55,26 @@ body {
   left: 24px;
   background-color: white;
 }
-
 .checkbox:checked + {
   background: black;
+}
+
+.row-item:last-child {
+  border: none;
+}
+.row-item img {
+  object-fit: contain;
+}
+
+.dark-gray {
+  --dark-gray: #345;
+  color: var(--dark-gray) !important;
+}
+.light-gray {
+  --light-gray: #89a;
+  color: var(--light-gray) !important;
+}
+.purple {
+  --purple: #745fb5;
+  color: var(--purple) !important;
 }
