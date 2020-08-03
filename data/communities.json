@@ -1,0 +1,35 @@
+[
+  {
+    "logo": "images/bugsandbrews.jpg",
+    "role": "Co-Founder",
+    "company": "Bugs & Brews",
+    "period": "Feb. 2019 - <strong>Present</strong>",
+    "link": "http://bugsandbrews.nyc/"
+  },
+  {
+    "logo": "images/hackny.jpg",
+    "role": "HackNY Fellow",
+    "company": "HackNY Fellowship",
+    "period": "Oct. 2017 - Feb. 2019",
+    "link": "https://hackny.org/"
+  },
+  {
+    "logo": "images/freetail.jpg",
+    "role": "Co-Director / Co-Founder",
+    "company": "HackTX / Freetail Hackers",
+    "period": "Aug. 2016 - Oct. 2017",
+    "link": "https://freetailhackers.com/"
+  },
+  {
+    "logo": "images/mad.jpg",
+    "role": "Co-Founder",
+    "company": "Mobile App Development",
+    "period": "May 2015 - Aug. 2015"
+  },
+  {
+    "logo": "images/txdh.jpg",
+    "role": "Co-Founder",
+    "company": "Texas Downhill",
+    "period": "Sept. 2014 - May 2015"
+  }
+]
