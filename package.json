@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "postinstall": "yarn content"
+    "start": "next start"
   },
   "license": "MIT",
   "dependencies": {
