@@ -1,0 +1,30 @@
+[
+  {
+    "logo": "images/streetlives.jpg",
+    "title": "Full Stack Engineer",
+    "subtitle": "Streetlives / Delta NYC",
+    "period": "May 11, 2018",
+    "link": "https://twitter.com/streetlivesnyc"
+  },
+  {
+    "logo": "images/hackny.jpg",
+    "title": "Technical Advisor",
+    "subtitle": "Brown Institute / HackNY",
+    "period": "Sept. 2, 2018",
+    "link": "https://medium.com/hackny/hackny-summer-of-good-2019-recap-a038d2b5aea7"
+  },
+  {
+    "logo": "images/infinity.jpg",
+    "title": "Developer",
+    "subtitle": "Infinity Goods",
+    "period": "Aug. 4, 2019",
+    "link": "https://www.infinitygoodsdelivery.com/"
+  },
+  {
+    "logo": "images/houseofable.jpg",
+    "title": "Business Development",
+    "subtitle": "House of Able",
+    "period": "Feb. 12, 2019",
+    "link": "https://www.catchafire.org/organizations/houseofable_16192"
+  }
+]

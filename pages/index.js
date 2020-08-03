@@ -6,9 +6,11 @@ import Anchor from "../components/Anchor";
 import ProjectItem from "../components/home/ProjectItem";
 import TeamItem from "../components/home/TeamItem";
 
-import work from "../data/work.json";
-import education from "../data/education.json";
+import articles from "../data/articles.json";
 import communities from "../data/communities.json";
+import education from "../data/education.json";
+import volunteer from "../data/volunteer.json";
+import work from "../data/work.json";
 
 const RowItem = ({ logo, title, subtitle, link, period, description }) => (
   <div className="row-item flex items-center pv2 ph3 bb b--light-gray">
@@ -30,15 +32,33 @@ const RowItem = ({ logo, title, subtitle, link, period, description }) => (
   </div>
 );
 
-const HomePage = ({ projects, work, education, communities }) => {
-  const [showTeams, setShowTeams] = useState(true);
+const ShowButton = ({ showMore, onClick }) => (
+  <button
+    onClick={() => onClick(!showMore)}
+    className="ba bg-transparent b--moon-gray gray fw5 br2 ph2 lh-solid pv1 pointer"
+    style={{ fontSize: "12px" }}
+  >
+    {showMore ? "Show Less" : "Show More"}
+  </button>
+);
+
+const HomePage = ({
+  articles,
+  projects,
+  work,
+  education,
+  communities,
+  volunteer,
+}) => {
   const [showProjects, setShowProjects] = useState(true);
   const [showWork, setShowWork] = useState(false);
   const [showCommunities, setShowCommunities] = useState(false);
-  const filteredWork = showWork ? work : work.slice(0, 3);
-  const filteredCommunities = showCommunities
-    ? communities
-    : communities.slice(0, 2);
+  const [showArticles, setShowArticles] = useState(false);
+  const [showVolunteer, setShowVolunteer] = useState(false);
+  const _work = showWork ? work : work.slice(0, 3);
+  const _communities = showCommunities ? communities : communities.slice(0, 2);
+  const _articles = showArticles ? articles : articles.slice(0, 3);
+  const _volunteer = showVolunteer ? volunteer : volunteer.slice(0, 2);
   return (
     <div className="helvetica relative bg-near-white near-black pv5">
       <Meta
@@ -55,23 +75,13 @@ const HomePage = ({ projects, work, education, communities }) => {
       <div className="mw8 center mb5">
         <h3 className="prime purple f4 fw4">Projects</h3>
       </div>
-      <div className="mw8 center fw4 mb5">
+      <div className="mw8 center fw4 mb4">
         <div className="flex items-center mb3 pb1 justify-between">
           <h3 className="prime purple f4 fw4 mv0">Work Experience</h3>
-          {!showWork && (
-            <div className="flex justify-center">
-              <button
-                onClick={() => setShowWork(true)}
-                className="ba bg-transparent b--moon-gray gray fw5 br2 ph2 lh-solid pv1 pointer"
-                style={{ fontSize: "12px" }}
-              >
-                Show More
-              </button>
-            </div>
-          )}
+          <ShowButton showMore={showWork} onClick={setShowWork} />
         </div>
         <div className="mt3 br3 bg-white shadow">
-          {filteredWork.map((item, key) => (
+          {_work.map((item, key) => (
             <RowItem
               key={key}
               logo={item.logo}
@@ -83,23 +93,13 @@ const HomePage = ({ projects, work, education, communities }) => {
           ))}
         </div>
       </div>
-      <div className="mw8 center fw4 mb5">
+      <div className="mw8 center fw4 mb4">
         <div className="flex items-center mb3 pb1 justify-between mt4">
           <h3 className="prime purple f4 fw4 mv0">Communities</h3>
-          {!showCommunities && (
-            <div className="flex justify-center">
-              <button
-                onClick={() => setShowCommunities(true)}
-                className="ba bg-transparent b--moon-gray gray fw5 br2 ph2 lh-solid pv1 pointer"
-                style={{ fontSize: "12px" }}
-              >
-                Show More
-              </button>
-            </div>
-          )}
+          <ShowButton showMore={showCommunities} onClick={setShowCommunities} />
         </div>
         <div className="mt3 br3 bg-white shadow">
-          {filteredCommunities.map((item, key) => (
+          {_communities.map((item, key) => (
             <RowItem
               key={key}
               logo={item.logo}
@@ -111,7 +111,41 @@ const HomePage = ({ projects, work, education, communities }) => {
           ))}
         </div>
       </div>
-      <div className="mw8 center mb5">
+      <div className="mw8 center mb4">
+        <div className="flex items-center mb3 pb1 justify-between mt4">
+          <h3 className="prime purple f4 fw4 mv0">Articles & Talks</h3>
+          <ShowButton showMore={showArticles} onClick={setShowArticles} />
+        </div>
+        <div className="mt3 br3 bg-white shadow">
+          {_articles.map((item, key) => (
+            <RowItem
+              key={key}
+              logo={item.logo}
+              title={item.title}
+              subtitle={item.subtitle}
+              period={item.period}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="mw8 center mb4">
+        <div className="flex items-center mb3 pb1 justify-between mt4">
+          <h3 className="prime purple f4 fw4 mv0">Volunteer</h3>
+          <ShowButton showMore={showVolunteer} onClick={setShowVolunteer} />
+        </div>
+        <div className="mt3 br3 bg-white shadow">
+          {_volunteer.map((item, key) => (
+            <RowItem
+              key={key}
+              logo={item.logo}
+              title={item.title}
+              subtitle={item.subtitle}
+              period={item.period}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="mw8 center mb4">
         <h3 className="prime purple f4 fw4">Education</h3>
         <div className="mt3 br3 bg-white shadow">
           {education.map((item, key) => (
@@ -128,13 +162,13 @@ const HomePage = ({ projects, work, education, communities }) => {
       <div className="mw8 center mb4">
         <h3 className="prime purple f4 fw4 mb2">Contact</h3>
         <p className="mt2 dark-gray">
-          If you are intested in working together, send me a message or{" "}
+          If you are interested in working together, send me a message or{" "}
           <Anchor href="mailto:nikolazaris@gmail.com" className="color-inherit">
             email me
           </Anchor>
           .
         </p>
-        <div className="flex purple justify-center center mt4 pt3">
+        <div className="flex purple justify-center center mt4 pt4 f6">
           <Anchor className="color-inherit" href="https://github.com/nlaz">
             GitHub
           </Anchor>
@@ -161,9 +195,11 @@ const HomePage = ({ projects, work, education, communities }) => {
 HomePage.getInitialProps = async () => {
   return {
     projects: [],
-    work: work,
+    articles: articles,
     communities: communities,
     education: education,
+    volunteer: volunteer,
+    work: work,
   };
 };
 

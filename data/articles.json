@@ -1,0 +1,37 @@
+[
+  {
+    "logo": "images/hobbies.jpg",
+    "title": "Microservices, Systems, Hobbies, and Self-Worth",
+    "subtitle": "A technical perspective on the value of hobbies.",
+    "period": "July 27, 2020",
+    "link": "https://medium.com/@nikolazaris/microservices-systems-hobbies-and-self-worth-1a62a7f1f312"
+  },
+  {
+    "logo": "images/trees.jpg",
+    "title": "The Deforestation of American Cities",
+    "subtitle": "How declining tree cover affects our health and wallets",
+    "period": "Feb. 7, 2019",
+    "link": "https://medium.com/@nikolazaris/the-deforestation-of-american-cities-5143fd16370f"
+  },
+  {
+    "logo": "images/principles.jpg",
+    "title": "Principles, Not Frameworks",
+    "subtitle": "Avoiding programming trends for long-term principles.",
+    "period": "Apr. 21, 2018",
+    "link": "https://docs.google.com/presentation/d/e/2PACX-1vSdTA4OD1YxNBeKRe2nSUjAWUYob6eLuA7wPfrkRbQNZUkggh3XUmj8eVeTy73uaF0fREHcy6U7TosL/pub?start=true&loop=true&delayms=60000"
+  },
+  {
+    "logo": "images/byob.jpg",
+    "title": "BYOB: Build Your Own Backend",
+    "subtitle": "A walk-though setting up a Node.js & MongoDB server.",
+    "period": "Feb. 4, 2017",
+    "link": "https://docs.google.com/presentation/d/e/2PACX-1vQdnmIREC50SchaH01E0SS5FZIlehKtBTTQbyQUyh2hYpMkhHf2AmXacmts7w3CHKmFEdWtak8XkDqB/pub?start=false&loop=false&delayms=60000"
+  },
+  {
+    "logo": "images/campus.jpg",
+    "title": "Navigating Campus Bureaucracy",
+    "subtitle": "Working with campus officials to get what you want.",
+    "period": "June 25, 2016",
+    "link": "https://docs.google.com/presentation/d/e/2PACX-1vQPFjLobWqwb9hdi_bukm4IO-Il0nOi0275W9eVtFdhUqxBUSR_AgaVrzM8KrZAo8xIudjy-LpWCA03/pub?start=false&loop=false&delayms=60000"
+  }
+]
