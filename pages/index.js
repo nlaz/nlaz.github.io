@@ -98,14 +98,7 @@ const HomePage = ({
         description="I build things for the internet. Senior Product Manager at Major League Hacking. Previously Meetup, hackNY, and HubSpot."
       />
       <div className="mw8 center mb5 ph3 ph0-l">
-        <div className="relative">
-          <Emoji
-            value="🍕"
-            className="absolute"
-            style={{ fontSize: "2.5rem", left: "-3.5rem", top: ".5rem" }}
-          />
-          <h1 className="f1 dark-gray fw6 mv0">Niko Lazaris</h1>
-        </div>
+        <h1 className="f1 dark-gray fw6 mv0">Niko Lazaris</h1>
         <p className="mt1 light-gray mb5" style={{ fontSize: "18px" }}>
           Building things for the internet. Senior Product Manager at Major
           League Hacking.
