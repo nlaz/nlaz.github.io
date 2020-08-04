@@ -30,7 +30,7 @@ class Meta extends Component {
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="description" content={this.props.description} />
         <meta property="fb:app_id" content="1612424139009027" />
-        <meta property="og:site_name" content="Major League Hacking" />
+        <meta property="og:site_name" content="Niko Lazaris" />
         <meta property="og:title" content={this.props.title} />
         <meta property="og:description" content={this.props.description} />
         <meta property="og:type" content="website" />

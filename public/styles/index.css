@@ -80,16 +80,6 @@ a[href].row-item:hover {
 .row-item img {
   object-fit: contain;
 }
-.project-wrapper {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-.project-wrapper:nth-child(3n) {
-  padding-right: 0;
-}
-.project-wrapper:nth-child(3n + 1) {
-  padding-left: 0;
-}
 .project-card:hover {
   transition: all 0.2s ease-in-out;
   box-shadow: 0 1px 1px rgba(85, 102, 119, 0.1),
@@ -112,6 +102,40 @@ a[href].row-item:hover {
   height: 140px;
   object-fit: cover;
   transition: all 0.2s ease-in-out;
+}
+.project-wrapper {
+  width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+  .project-wrapper {
+    width: 50%;
+  }
+  .project-wrapper {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .project-wrapper:nth-child(2n) {
+    padding-right: 0;
+  }
+  .project-wrapper:nth-child(2n + 1) {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 60em) {
+  .project-wrapper {
+    width: 33.3%;
+  }
+  .project-wrapper:nth-child(3n) {
+    padding-right: 0;
+  }
+  .project-wrapper:nth-child(3n + 1) {
+    padding-left: 0;
+  }
+  .project-wrapper {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 }
 
 .dark-gray {

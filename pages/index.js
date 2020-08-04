@@ -3,6 +3,7 @@ import cx from "classnames";
 
 import Meta from "../components/Meta";
 import Anchor from "../components/Anchor";
+import Emoji from "../components/Emoji";
 import ProjectItem from "../components/home/ProjectItem";
 import TeamItem from "../components/home/TeamItem";
 
@@ -16,7 +17,7 @@ import work from "../data/work.json";
 import badgeFor from "../utils/badgeFor";
 
 const ProjectCard = ({ project }) => (
-  <div className="project-wrapper w-third mb4 pb1">
+  <div className="project-wrapper mb4 pb1">
     <Anchor
       className="project-card link-reset flex flex-column h-100 shadow br3 bg-white"
       href={project.link}
@@ -94,16 +95,23 @@ const HomePage = ({
     <div className="helvetica relative bg-near-white near-black pv5">
       <Meta
         title="Niko Lazaris"
-        description="I build things for the internet. Product Manager at Major League Hacking. Previously Meetup, hackNY, and HubSpot."
+        description="I build things for the internet. Senior Product Manager at Major League Hacking. Previously Meetup, hackNY, and HubSpot."
       />
-      <div className="mw8 center mb5">
-        <h1 className="f1 dark-gray fw4 mv0">Niko Lazaris</h1>
+      <div className="mw8 center mb5 ph3 ph0-l">
+        <div className="relative">
+          <Emoji
+            value="🍕"
+            className="absolute"
+            style={{ fontSize: "2.5rem", left: "-3.5rem", top: ".5rem" }}
+          />
+          <h1 className="f1 dark-gray fw6 mv0">Niko Lazaris</h1>
+        </div>
         <p className="mt1 light-gray mb5" style={{ fontSize: "18px" }}>
           Building things for the internet. Senior Product Manager at Major
           League Hacking.
         </p>
       </div>
-      <div className="mw8 center mb3">
+      <div className="mw8 center mb3 ph3 ph0-l">
         <div className="flex items-center mb3 pb1 justify-between">
           <h3 className="prime purple f4 fw4 mv0">Projects</h3>
           <ShowButton showMore={showProjects} onClick={setShowProjects} />
@@ -114,7 +122,7 @@ const HomePage = ({
           ))}
         </div>
       </div>
-      <div className="mw8 center fw4 mb4">
+      <div className="mw8 center fw4 mb4 ph3 ph0-l">
         <div className="flex items-center mb3 pb1 justify-between">
           <h3 className="prime purple f4 fw4 mv0">Work Experience</h3>
           <ShowButton showMore={showWork} onClick={setShowWork} />
@@ -133,7 +141,7 @@ const HomePage = ({
           ))}
         </div>
       </div>
-      <div className="mw8 center mb4">
+      <div className="mw8 center mb4 ph3 ph0-l">
         <div className="flex items-center mb3 pb1 justify-between mt4">
           <h3 className="prime purple f4 fw4 mv0">Articles & Talks</h3>
           <ShowButton showMore={showArticles} onClick={setShowArticles} />
@@ -151,7 +159,7 @@ const HomePage = ({
           ))}
         </div>
       </div>
-      <div className="mw8 center fw4 mb4">
+      <div className="mw8 center mb4 ph3 ph0-l">
         <div className="flex items-center mb3 pb1 justify-between mt4">
           <h3 className="prime purple f4 fw4 mv0">Communities</h3>
           <ShowButton showMore={showCommunities} onClick={setShowCommunities} />
@@ -170,7 +178,7 @@ const HomePage = ({
           ))}
         </div>
       </div>
-      <div className="mw8 center mb4">
+      <div className="mw8 center mb4 ph3 ph0-l">
         <div className="flex items-center mb3 pb1 justify-between mt4">
           <h3 className="prime purple f4 fw4 mv0">Volunteer</h3>
           <ShowButton showMore={showVolunteer} onClick={setShowVolunteer} />
@@ -188,7 +196,7 @@ const HomePage = ({
           ))}
         </div>
       </div>
-      <div className="mw8 center mb4">
+      <div className="mw8 center mb4 ph3 ph0-l">
         <h3 className="prime purple f4 fw4">Education</h3>
         <div className="mt3 br3 bg-white shadow">
           {education.map((item, key) => (
@@ -203,7 +211,7 @@ const HomePage = ({
           ))}
         </div>
       </div>
-      <div className="mw8 center mb4">
+      <div className="mw8 center mb4 ph3 ph0-l">
         <h3 className="prime purple f4 fw4 mb2">Contact</h3>
         <p className="mt2 dark-gray">
           If you are interested in working together, send me a message or{" "}
