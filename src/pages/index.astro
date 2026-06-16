@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ChessGame from '../components/ChessGame.astro';
 const posts = await Astro.glob('./blog/*.md');
 const sorted = posts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
 ---
@@ -17,4 +18,5 @@ const sorted = posts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a
       </div>
     ))}
   </div>
+  <ChessGame />
 </Layout>

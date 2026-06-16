@@ -1,0 +1,97 @@
+---
+import { useState, useEffect } from 'react';
+
+const initialBoard = [
+  ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
+  ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+  ['', '', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '', ''],
+  ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+  ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'],
+];
+
+const ChessGame = () => {
+  const [board, setBoard] = useState(initialBoard);
+  const [turn, setTurn] = useState('white');
+  const [whitePlayer, setWhitePlayer] = useState('');
+  const [blackPlayer, setBlackPlayer] = useState('');
+  const [currentPlayer, setCurrentPlayer] = useState('');
+
+  useEffect(() => {
+    // Load game state from local storage or server
+    const savedBoard = JSON.parse(localStorage.getItem('chessBoard'));
+    const savedTurn = localStorage.getItem('chessTurn');
+    const savedWhitePlayer = localStorage.getItem('whitePlayer');
+    const savedBlackPlayer = localStorage.getItem('blackPlayer');
+    if (savedBoard) setBoard(savedBoard);
+    if (savedTurn) setTurn(savedTurn);
+    if (savedWhitePlayer) setWhitePlayer(savedWhitePlayer);
+    if (savedBlackPlayer) setBlackPlayer(savedBlackPlayer);
+  }, []);
+
+  useEffect(() => {
+    // Save game state to local storage or server
+    localStorage.setItem('chessBoard', JSON.stringify(board));
+    localStorage.setItem('chessTurn', turn);
+    localStorage.setItem('whitePlayer', whitePlayer);
+    localStorage.setItem('blackPlayer', blackPlayer);
+  }, [board, turn, whitePlayer, blackPlayer]);
+
+  const handleMove = (from, to) => {
+    // Implement move logic
+    const newBoard = [...board];
+    newBoard[to[0]][to[1]] = newBoard[from[0]][from[1]];
+    newBoard[from[0]][from[1]] = '';
+    setBoard(newBoard);
+    setTurn(turn === 'white' ? 'black' : 'white');
+  };
+
+  const handlePlayerChange = (e) => {
+    setCurrentPlayer(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (turn === 'white') {
+      setWhitePlayer(currentPlayer);
+    } else {
+      setBlackPlayer(currentPlayer);
+    }
+    setCurrentPlayer('');
+  };
+
+  return (
+    <div>
+      <h2>Chess Game</h2>
+      <div>
+        <label>
+          Current Player:
+          <input type="text" value={currentPlayer} onChange={handlePlayerChange} />
+        </label>
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
+      <div>
+        <h3>White: {whitePlayer}</h3>
+        <h3>Black: {blackPlayer}</h3>
+      </div>
+      <div>
+        <h3>Turn: {turn}</h3>
+      </div>
+      <div className="chessboard">
+        {board.map((row, rowIndex) => (
+          <div key={rowIndex} className="row">
+            {row.map((cell, cellIndex) => (
+              <div key={cellIndex} className="cell">
+                {cell}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ChessGame;
